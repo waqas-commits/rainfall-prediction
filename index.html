@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rainfall Prediction Using Machine Learning</title>
+</head>
+<body>
+    <h2>Rainfall Prediction System</h2>
+    <form action="/predict" method="post">
+        <label>Temperature:</label><input type="text" name="temp"><br>
+        <label>Humidity:</label><input type="text" name="humidity"><br>
+        <label>Pressure:</label><input type="text" name="pressure"><br>
+        <input type="submit" value="Predict Rainfall">
+    </form>
+    {% if prediction %}
+        <h3>Predicted Rainfall: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
